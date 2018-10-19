@@ -15,6 +15,26 @@ necessary to get started with Keanu.
 
 For more details please see the main Keanu repository [here](https://github.com/improbable-research/keanu).
 
+## Build examples
+
+```bash
+# regular
+> bazel build //:keanu-starter
+> bazel run //:keanu-starter
+
+# deploy jar
+> bazel build //:keanu-starter_deploy.jar
+> java -jar bazel-bin/keanu-starter_deploy.jar
+
+# docker
+> bazel build //:keanu-starter-docker
+> bazel run //:keanu-starter-docker
+
+# docker load
+> bazel build //:keanu-starter-docker.tar
+> docker load -i bazel-bin/keanu-starter-docker.tar
+```
+
 ## Hiring
 
 Interested in working for Improbable on cool problems? Start [here](https://improbable.io/careers/joining-us)

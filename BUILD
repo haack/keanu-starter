@@ -13,7 +13,30 @@ java_library(
     deps = [
         "@io_improbable_keanu//jar",
         "//third-party:io_improbable_keanu",
+        "//:lombok",
     ],
+    plugins = [
+            ":lombok_plugin",
+    ],
+)
+
+java_library(
+    name = "lombok",
+    exports = [
+        "@org_projectlombok_lombok//jar",
+    ],
+    exported_plugins = [
+        ":lombok_plugin"
+    ],
+)
+
+java_plugin(
+    name = "lombok_plugin",
+    processor_class = "lombok.launch.AnnotationProcessorHider$AnnotationProcessor",
+    deps = [
+        "@org_projectlombok_lombok//jar",
+    ],
+    generates_api = 1,
 )
 
 java_test(

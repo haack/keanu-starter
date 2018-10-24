@@ -32,4 +32,10 @@ load(
     _java_image_repos = "repositories",
 )
 
+maven_jar(
+  name = "org_projectlombok_lombok",
+  artifact = "org.projectlombok:lombok:1.18.2",
+  repository = "http://uk.maven.org/maven2/",
+)
+
 _java_image_repos()

@@ -1,6 +1,6 @@
 # The following dependencies were calculated from:
 #
-# generate_workspace --artifact=io.improbable:keanu:0.0.13 --repositories=http://uk.maven.org/maven2
+# generate_workspace --artifact=io.improbable:keanu:0.0.14 --repositories=http://uk.maven.org/maven2
 
 
 def generated_maven_jars():
@@ -22,7 +22,16 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:jackson:jar:1.0.0-beta
+  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta2
+  native.maven_jar(
+      name = "org_bytedeco_javacpp_presets_mkl_dnn_platform",
+      artifact = "org.bytedeco.javacpp-presets:mkl-dnn-platform:0.15-1.4.2",
+      repository = "http://uk.maven.org/maven2/",
+      sha1 = "1723f4abd29672f2693b5575c654259116a8a5d4",
+  )
+
+
+  # org.nd4j:jackson:jar:1.0.0-beta2
   native.maven_jar(
       name = "joda_time_joda_time",
       artifact = "joda-time:joda-time:2.2",
@@ -31,16 +40,16 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
       name = "commons_io_commons_io",
-      artifact = "commons-io:commons-io:2.4",
+      artifact = "commons-io:commons-io:2.5",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "b1b6ea3b7e4aa4f492509a4952029cd8e48019ad",
+      sha1 = "2852e6e05fbb95076fc091f6d1780f1f8fe35e0f",
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "net_ericaro_neoitertools",
       artifact = "net.ericaro:neoitertools:1.0.0",
@@ -49,16 +58,16 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-native:jar:1.0.0-beta
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_nd4j_nd4j_native_api",
-      artifact = "org.nd4j:nd4j-native-api:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-native-api:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "8166ac8b07107d5864b0621012ca97c3dc057dd5",
+      sha1 = "d785ca05ba712f43fd17122c2931e3a5d238c5cc",
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "com_vlkan_flatbuffers",
       artifact = "com.vlkan:flatbuffers:1.2.0-3f79e055",
@@ -76,18 +85,27 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-native-api:jar:1.0.0-beta
-  # org.nd4j:nd4j-native:jar:1.0.0-beta got requested version
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
-      name = "org_nd4j_nd4j_api",
-      artifact = "org.nd4j:nd4j-api:1.0.0-beta",
+      name = "commons_codec_commons_codec",
+      artifact = "commons-codec:commons-codec:1.10",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "0292e6a714d4e76dd220d82ba39913d89af39573",
+      sha1 = "4b95f4897fa13f2cd904aee711aeafc0c5295cd8",
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta
+  # org.nd4j:nd4j-native-api:jar:1.0.0-beta2
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
+  native.maven_jar(
+      name = "org_nd4j_nd4j_api",
+      artifact = "org.nd4j:nd4j-api:1.0.0-beta2",
+      repository = "http://uk.maven.org/maven2/",
+      sha1 = "52f36edfd20fe531e9951270c65cbc178142f51d",
+  )
+
+
   # com.github.os72:protobuf-java-util-shaded-351:jar:0.9 got requested version
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "com_github_os72_protobuf_java_shaded_351",
       artifact = "com.github.os72:protobuf-java-shaded-351:0.9",
@@ -96,7 +114,7 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "uk_com_robust_it_cloning",
       artifact = "uk.com.robust-it:cloning:1.9.3",
@@ -105,27 +123,28 @@ def generated_maven_jars():
   )
 
 
-  # org.bytedeco.javacpp-presets:openblas-platform:jar:0.2.20-1.4.1
-  # org.nd4j:nd4j-native:jar:1.0.0-beta got requested version
-  # org.bytedeco.javacpp-presets:openblas-platform:jar:0.2.20-1.4.1 got requested version
+  # org.bytedeco.javacpp-presets:openblas-platform:jar:0.3.0-1.4.2
+  # org.bytedeco.javacpp-presets:openblas-platform:jar:0.3.0-1.4.2 got requested version
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
   native.maven_jar(
       name = "org_bytedeco_javacpp_presets_openblas",
-      artifact = "org.bytedeco.javacpp-presets:openblas:0.2.20-1.4.1",
+      artifact = "org.bytedeco.javacpp-presets:openblas:0.3.0-1.4.2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "e3d9d2453428506a7419ce2a415c3631c9f50324",
+      sha1 = "cad47d2b659485d3221b996d036f65b50e857a05",
   )
 
 
-  # uk.com.robust-it:cloning:bundle:1.9.3
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
+  # uk.com.robust-it:cloning:bundle:1.9.3 wanted version 2.1
   native.maven_jar(
       name = "org_objenesis_objenesis",
-      artifact = "org.objenesis:objenesis:2.1",
+      artifact = "org.objenesis:objenesis:2.6",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "87c0ea803b69252868d09308b4618f766f135a96",
+      sha1 = "639033469776fd37c08358c6b92a4761feb2af4b",
   )
 
 
-  # io.improbable:keanu:jar:0.0.13
+  # io.improbable:keanu:jar:0.0.14
   native.maven_jar(
       name = "org_slf4j_slf4j_nop",
       artifact = "org.slf4j:slf4j-nop:1.7.10",
@@ -134,24 +153,24 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta got requested version
-  # org.nd4j:nd4j-native:jar:1.0.0-beta got requested version
-  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta
+  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta2
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
   native.maven_jar(
       name = "org_nd4j_nd4j_native",
-      artifact = "org.nd4j:nd4j-native:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-native:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "2ad2b993a02c24746414a665371ed6025f876100",
+      sha1 = "2b63ddb131ded11e707eaf19c4a79da24f3cd048",
   )
 
 
-  # org.nd4j:nd4j-native-api:jar:1.0.0-beta
-  # org.nd4j:nd4j-api:jar:1.0.0-beta got requested version
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-native-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_nd4j_nd4j_buffer",
-      artifact = "org.nd4j:nd4j-buffer:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-buffer:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "b51af8074dbb8d279c551e63eb5a904ab8f0c4b9",
+      sha1 = "c62010d8d71f22ac3c42d10f8b0acb52f429f62f",
   )
 
 
@@ -164,14 +183,14 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta got requested version
-  # org.slf4j:slf4j-nop:jar:1.7.12 got requested version
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
+  # org.slf4j:slf4j-nop:jar:1.7.21 got requested version
   native.maven_jar(
       name = "org_slf4j_slf4j_api",
-      artifact = "org.slf4j:slf4j-api:1.7.12",
+      artifact = "org.slf4j:slf4j-api:1.7.21",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "8e20852d05222dc286bf1c71d78d0531e177c317",
+      sha1 = "139535a69a4239db087de9bab0bee568bf8e0b70",
   )
 
 
@@ -184,9 +203,20 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta wanted version 3.4.1
-  # org.nd4j:nd4j-common:jar:1.0.0-beta wanted version 3.4.1
-  # io.improbable:keanu:jar:0.0.13
+  # org.bytedeco.javacpp-presets:mkl-dnn-platform:jar:0.15-1.4.2 got requested version
+  # org.bytedeco.javacpp-presets:mkl-dnn-platform:jar:0.15-1.4.2
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
+  native.maven_jar(
+      name = "org_bytedeco_javacpp_presets_mkl_dnn",
+      artifact = "org.bytedeco.javacpp-presets:mkl-dnn:0.15-1.4.2",
+      repository = "http://uk.maven.org/maven2/",
+      sha1 = "86284a897102efdde80deb3dfbc16f8864b27fff",
+  )
+
+
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 wanted version 3.5
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2 wanted version 3.5
+  # io.improbable:keanu:jar:0.0.14
   native.maven_jar(
       name = "org_apache_commons_commons_math3",
       artifact = "org.apache.commons:commons-math3:3.6.1",
@@ -195,7 +225,7 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_apache_commons_commons_compress",
       artifact = "org.apache.commons:commons-compress:1.16.1",
@@ -204,7 +234,7 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2
   native.maven_jar(
       name = "com_github_os72_protobuf_java_util_shaded_351",
       artifact = "com.github.os72:protobuf-java-util-shaded-351:0.9",
@@ -222,53 +252,53 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta
+  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_bytedeco_javacpp_presets_mkl_platform",
-      artifact = "org.bytedeco.javacpp-presets:mkl-platform:2018.1-1.4.1",
+      artifact = "org.bytedeco.javacpp-presets:mkl-platform:2018.3-1.4.2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "c4d534a3ae3bf49a67cbacdcdc0f8bfbae3b22eb",
+      sha1 = "5b83c6d77ad0a4aaab0bcd71d9c68f79cdf93eb0",
   )
 
 
-  # org.nd4j:nd4j-context:jar:1.0.0-beta
+  # org.nd4j:nd4j-context:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_nd4j_nd4j_common",
-      artifact = "org.nd4j:nd4j-common:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-common:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "f6a1f2673cc93f6865c6e360782ec07361abc9a4",
+      sha1 = "bf85cec42a0e45d018865f4ce436ac612f368300",
   )
 
 
   native.maven_jar(
       name = "io_improbable_keanu",
-      artifact = "io.improbable:keanu:0.0.13",
+      artifact = "io.improbable:keanu:0.0.14",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "2e860ddab88527a3616274e99fef7e9c86eda683",
+      sha1 = "38a487262d3a16829c57b2960dba6a6438176b80",
   )
 
 
-  # org.nd4j:nd4j-api:jar:1.0.0-beta got requested version
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_nd4j_jackson",
-      artifact = "org.nd4j:jackson:1.0.0-beta",
+      artifact = "org.nd4j:jackson:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "0949b97457f9b44a4f6a33f4bb77aa55d5f5e5fe",
+      sha1 = "bcda24da1f16739480f71b3d6ec6ffb5c0a41a9d",
   )
 
 
-  # org.nd4j:nd4j-buffer:jar:1.0.0-beta
-  # org.nd4j:nd4j-api:jar:1.0.0-beta got requested version
+  # org.nd4j:nd4j-buffer:jar:1.0.0-beta2
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 got requested version
   native.maven_jar(
       name = "org_nd4j_nd4j_context",
-      artifact = "org.nd4j:nd4j-context:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-context:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "d930b2bf36873ed4680b095c120fc074c952c32f",
+      sha1 = "cd9de37cf5acbf6bc8cb5e56db926730c1a4baed",
   )
 
 
-  # io.improbable:keanu:jar:0.0.13
+  # io.improbable:keanu:jar:0.0.14
   native.maven_jar(
       name = "com_opencsv_opencsv",
       artifact = "com.opencsv:opencsv:4.2",
@@ -277,7 +307,7 @@ def generated_maven_jars():
   )
 
 
-  # org.nd4j:jackson:jar:1.0.0-beta
+  # org.nd4j:jackson:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_codehaus_woodstox_stax2_api",
       artifact = "org.codehaus.woodstox:stax2-api:3.1.4",
@@ -295,38 +325,39 @@ def generated_maven_jars():
   )
 
 
-  # io.improbable:keanu:jar:0.0.13
+  # io.improbable:keanu:jar:0.0.14
   native.maven_jar(
       name = "org_nd4j_nd4j_native_platform",
-      artifact = "org.nd4j:nd4j-native-platform:1.0.0-beta",
+      artifact = "org.nd4j:nd4j-native-platform:1.0.0-beta2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "06eaa4ecf74f6bc0ba4eec0dc924315a210705fa",
+      sha1 = "5313668e57f9133ad52c048743c4d855702ce91a",
   )
 
 
   # com.opencsv:opencsv:jar:4.2 wanted version 3.7
   # org.apache.commons:commons-text:jar:1.3 wanted version 3.7
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_apache_commons_commons_lang3",
-      artifact = "org.apache.commons:commons-lang3:3.4",
+      artifact = "org.apache.commons:commons-lang3:3.6",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "5fe28b9518e58819180a43a850fbc0dd24b7c050",
+      sha1 = "9d28a6b23650e8a7e9063c04588ace6cf7012c17",
   )
 
 
-  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta
+  # org.nd4j:nd4j-native-platform:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_bytedeco_javacpp_presets_openblas_platform",
-      artifact = "org.bytedeco.javacpp-presets:openblas-platform:0.2.20-1.4.1",
+      artifact = "org.bytedeco.javacpp-presets:openblas-platform:0.3.0-1.4.2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "058228b8ac0353692cab33a44ff54ae8acaa15fe",
+      sha1 = "95f228cc119f21f798a845ffe35fefadff2a70eb",
   )
 
 
+  # org.nd4j:nd4j-api:jar:1.0.0-beta2 got requested version
   # com.github.os72:protobuf-java-util-shaded-351:jar:0.9 wanted version 19.0
-  # io.improbable:keanu:jar:0.0.13 got requested version
-  # org.nd4j:nd4j-common:jar:1.0.0-beta
+  # io.improbable:keanu:jar:0.0.14 got requested version
+  # org.nd4j:nd4j-common:jar:1.0.0-beta2
   native.maven_jar(
       name = "com_google_guava_guava",
       artifact = "com.google.guava:guava:20.0",
@@ -345,18 +376,18 @@ def generated_maven_jars():
   )
 
 
-  # org.bytedeco.javacpp-presets:mkl-platform:jar:2018.1-1.4.1 got requested version
-  # org.nd4j:nd4j-native:jar:1.0.0-beta got requested version
-  # org.bytedeco.javacpp-presets:mkl-platform:jar:2018.1-1.4.1
+  # org.bytedeco.javacpp-presets:mkl-platform:jar:2018.3-1.4.2
+  # org.bytedeco.javacpp-presets:mkl-platform:jar:2018.3-1.4.2 got requested version
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
   native.maven_jar(
       name = "org_bytedeco_javacpp_presets_mkl",
-      artifact = "org.bytedeco.javacpp-presets:mkl:2018.1-1.4.1",
+      artifact = "org.bytedeco.javacpp-presets:mkl:2018.3-1.4.2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "56705a1504df95d88df47acfe703a43d4dcd6a7f",
+      sha1 = "4b22bfde22e0a1b44043593198f986e113b9b33a",
   )
 
 
-  # org.nd4j:jackson:jar:1.0.0-beta
+  # org.nd4j:jackson:jar:1.0.0-beta2
   native.maven_jar(
       name = "org_yaml_snakeyaml",
       artifact = "org.yaml:snakeyaml:1.12",
@@ -365,16 +396,17 @@ def generated_maven_jars():
   )
 
 
-  # org.bytedeco.javacpp-presets:mkl:jar:2018.1-1.4.1 got requested version
-  # org.nd4j:nd4j-buffer:jar:1.0.0-beta got requested version
-  # org.nd4j:nd4j-native:jar:1.0.0-beta got requested version
-  # org.nd4j:nd4j-native-api:jar:1.0.0-beta got requested version
-  # org.bytedeco.javacpp-presets:openblas:jar:0.2.20-1.4.1
+  # org.bytedeco.javacpp-presets:mkl:jar:2018.3-1.4.2 got requested version
+  # org.bytedeco.javacpp-presets:openblas:jar:0.3.0-1.4.2
+  # org.nd4j:nd4j-native:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-buffer:jar:1.0.0-beta2 got requested version
+  # org.nd4j:nd4j-native-api:jar:1.0.0-beta2 got requested version
+  # org.bytedeco.javacpp-presets:mkl-dnn:jar:0.15-1.4.2 got requested version
   native.maven_jar(
       name = "org_bytedeco_javacpp",
-      artifact = "org.bytedeco:javacpp:1.4.1",
+      artifact = "org.bytedeco:javacpp:1.4.2",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "94b0d8239434d88f1069033aab20a71f2e9f106b",
+      sha1 = "cfa6a0259d98bff5aa8d41ba11b4d1dad648fbaa",
   )
 
 
@@ -387,7 +419,7 @@ def generated_maven_jars():
   )
 
 
-  # io.improbable:keanu:jar:0.0.13
+  # io.improbable:keanu:jar:0.0.14
   native.maven_jar(
       name = "org_jetbrains_kotlin_kotlin_stdlib_jdk8",
       artifact = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.31",
@@ -416,6 +448,17 @@ def generated_java_libraries():
       runtime_deps = [
           ":commons_collections_commons_collections",
           ":commons_logging_commons_logging",
+      ],
+  )
+
+
+  native.java_library(
+      name = "org_bytedeco_javacpp_presets_mkl_dnn_platform",
+      visibility = ["//visibility:public"],
+      exports = ["@org_bytedeco_javacpp_presets_mkl_dnn_platform//jar"],
+      runtime_deps = [
+          ":org_bytedeco_javacpp",
+          ":org_bytedeco_javacpp_presets_mkl_dnn",
       ],
   )
 
@@ -451,6 +494,7 @@ def generated_java_libraries():
           ":com_google_code_gson_gson",
           ":com_google_guava_guava",
           ":com_vlkan_flatbuffers",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":net_ericaro_neoitertools",
@@ -486,6 +530,13 @@ def generated_java_libraries():
       runtime_deps = [
           ":org_apache_commons_commons_lang3",
       ],
+  )
+
+
+  native.java_library(
+      name = "commons_codec_commons_codec",
+      visibility = ["//visibility:public"],
+      exports = ["@commons_codec_commons_codec//jar"],
   )
 
 
@@ -565,6 +616,7 @@ def generated_java_libraries():
           ":com_google_code_gson_gson",
           ":com_google_guava_guava",
           ":com_vlkan_flatbuffers",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":net_ericaro_neoitertools",
@@ -573,6 +625,7 @@ def generated_java_libraries():
           ":org_apache_commons_commons_math3",
           ":org_bytedeco_javacpp",
           ":org_bytedeco_javacpp_presets_mkl",
+          ":org_bytedeco_javacpp_presets_mkl_dnn",
           ":org_bytedeco_javacpp_presets_openblas",
           ":org_codehaus_woodstox_stax2_api",
           ":org_nd4j_jackson",
@@ -595,6 +648,7 @@ def generated_java_libraries():
       exports = ["@org_nd4j_nd4j_buffer//jar"],
       runtime_deps = [
           ":com_google_guava_guava",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":org_apache_commons_commons_compress",
@@ -629,6 +683,16 @@ def generated_java_libraries():
       name = "commons_logging_commons_logging",
       visibility = ["//visibility:public"],
       exports = ["@commons_logging_commons_logging//jar"],
+  )
+
+
+  native.java_library(
+      name = "org_bytedeco_javacpp_presets_mkl_dnn",
+      visibility = ["//visibility:public"],
+      exports = ["@org_bytedeco_javacpp_presets_mkl_dnn//jar"],
+      runtime_deps = [
+          ":org_bytedeco_javacpp",
+      ],
   )
 
 
@@ -682,6 +746,7 @@ def generated_java_libraries():
       exports = ["@org_nd4j_nd4j_common//jar"],
       runtime_deps = [
           ":com_google_guava_guava",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":org_apache_commons_commons_compress",
@@ -707,6 +772,7 @@ def generated_java_libraries():
           ":com_opencsv_opencsv",
           ":com_vlkan_flatbuffers",
           ":commons_beanutils_commons_beanutils",
+          ":commons_codec_commons_codec",
           ":commons_collections_commons_collections",
           ":commons_io_commons_io",
           ":commons_logging_commons_logging",
@@ -719,6 +785,8 @@ def generated_java_libraries():
           ":org_apache_commons_commons_text",
           ":org_bytedeco_javacpp",
           ":org_bytedeco_javacpp_presets_mkl",
+          ":org_bytedeco_javacpp_presets_mkl_dnn",
+          ":org_bytedeco_javacpp_presets_mkl_dnn_platform",
           ":org_bytedeco_javacpp_presets_mkl_platform",
           ":org_bytedeco_javacpp_presets_openblas",
           ":org_bytedeco_javacpp_presets_openblas_platform",
@@ -762,6 +830,7 @@ def generated_java_libraries():
       exports = ["@org_nd4j_nd4j_context//jar"],
       runtime_deps = [
           ":com_google_guava_guava",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":org_apache_commons_commons_compress",
@@ -815,6 +884,7 @@ def generated_java_libraries():
           ":com_google_code_gson_gson",
           ":com_google_guava_guava",
           ":com_vlkan_flatbuffers",
+          ":commons_codec_commons_codec",
           ":commons_io_commons_io",
           ":joda_time_joda_time",
           ":net_ericaro_neoitertools",
@@ -823,6 +893,8 @@ def generated_java_libraries():
           ":org_apache_commons_commons_math3",
           ":org_bytedeco_javacpp",
           ":org_bytedeco_javacpp_presets_mkl",
+          ":org_bytedeco_javacpp_presets_mkl_dnn",
+          ":org_bytedeco_javacpp_presets_mkl_dnn_platform",
           ":org_bytedeco_javacpp_presets_mkl_platform",
           ":org_bytedeco_javacpp_presets_openblas",
           ":org_bytedeco_javacpp_presets_openblas_platform",

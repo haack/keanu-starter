@@ -242,9 +242,8 @@ def generated_maven_jars():
 
   native.maven_jar(
       name = "io_improbable_keanu",
-      artifact = "io.improbable:keanu:0.0.13",
+      artifact = "io.improbable:keanu:0.0.14",
       repository = "http://uk.maven.org/maven2/",
-      sha1 = "2e860ddab88527a3616274e99fef7e9c86eda683",
   )
 
 

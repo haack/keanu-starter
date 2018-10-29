@@ -11,7 +11,6 @@ java_library(
     name = "keanu-starter-library",
     srcs = glob(["src/main/java/com/example/starter/**/*.java"]),
     deps = [
-        "@io_improbable_keanu//jar",
         "//third-party:io_improbable_keanu",
         "//:lombok",
     ],
